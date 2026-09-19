@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Penghao Zhou</title>
-  <meta name="description" content="Penghao Zhou is a senior AI researcher at ByteDance / TikTok, currently leading the TikTok Live Content AI team. Recent research and team opportunities.">
+  <meta name="description" content="Penghao Zhou is a senior AI researcher and team leader at ByteDance / TikTok, turning advances in multimodal learning and LLMs into production systems for recommendation and content understanding.">
   <meta property="og:title" content="Penghao Zhou">
-  <meta property="og:description" content="Senior AI researcher at ByteDance / TikTok, currently leading the TikTok Live Content AI team. Multimodal learning and large language models, from research to production.">
+  <meta property="og:description" content="Senior AI researcher and TikTok Live Content AI team leader. Research breakthroughs, production systems, and teams that bring them together.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://penghaozhou.github.io/">
   <meta property="og:image" content="https://penghaozhou.github.io/assets/profile_full.jpg">
@@ -241,6 +241,52 @@
       border-top: 3px solid var(--accent);
     }
 
+    .experience {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+
+    .subheading {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .experience .item:first-child {
+      padding-top: 0;
+    }
+
+    .experience-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 20px;
+      margin-bottom: 8px;
+    }
+
+    .experience-heading .item-title,
+    .experience-heading .item-meta {
+      margin: 0;
+    }
+
+    .education {
+      margin-top: 28px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 32px;
+    }
+
+    .education-grid p {
+      margin: 0;
+    }
+
     .content > .note {
       margin-top: 16px;
       color: var(--muted);
@@ -303,7 +349,8 @@
       }
 
       .work-grid,
-      .hiring-grid {
+      .hiring-grid,
+      .education-grid {
         grid-template-columns: 1fr;
       }
 
@@ -323,12 +370,14 @@
           I currently lead the TikTok Live Content AI team.
         </p>
         <p class="intro-detail">
-          My focus is on multimodal learning and large language models, bridging research and production systems
-          for live recommendation and content understanding.
+          I turn research advances in multimodal learning and large language models into production systems
+          for recommendation and content understanding. My work connects new methods, systems built from
+          the ground up, and the teams that bring them to scale.
         </p>
         <ul class="links" aria-label="Profile links">
           <li><a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></li>
           <li><a href="#work">Current Work</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#publications">Recent Research</a></li>
           <li><a href="#hiring">Join the Team</a></li>
         </ul>
@@ -351,7 +400,9 @@
           <p>
             Live content changes moment by moment. My team brings together video, audio, language, and
             creator-viewer interactions to build models for recommendation, content understanding, and feed-quality
-            governance. Our work spans four connected directions, supported by shared foundation models.
+            governance. I lead the technical direction and team development, connecting research priorities
+            with deployment and measurable product impact. Our work spans four connected directions,
+            supported by shared foundation models.
           </p>
           <ul class="work-grid">
             <li class="work-card">
@@ -394,6 +445,72 @@
               </p>
             </li>
           </ul>
+          <div class="experience" id="experience">
+            <h3 class="subheading">Experience &amp; Impact</h3>
+            <ul class="list">
+              <li class="item">
+                <div class="experience-heading">
+                  <h4 class="item-title">ByteDance · TikTok</h4>
+                  <p class="item-meta">Apr 2022 – Present</p>
+                </div>
+                <p class="item-desc">
+                  Before leading the Live Content AI team, I developed multimodal pretraining and video
+                  understanding models for TikTok. This work brought content representations into
+                  cold-start retrieval, recommendation diversification, and content governance, while
+                  reducing reliance on manual labeling. Today, I lead research and production efforts
+                  that connect multimodal models with live recommendation and creator-viewer interaction.
+                </p>
+              </li>
+              <li class="item">
+                <div class="experience-heading">
+                  <h4 class="item-title">ByteDance · Xigua Video</h4>
+                  <p class="item-meta">Dec 2021 – Apr 2022</p>
+                </div>
+                <p class="item-desc">
+                  Developed video highlight detection for long-form content, using matched clips as
+                  supervision to scale training. Model-generated highlights were deployed in the
+                  recommendation feed, improving viewing time and active days in online experiments.
+                </p>
+              </li>
+              <li class="item">
+                <div class="experience-heading">
+                  <h4 class="item-title">Tencent Youtu Lab · Computer Vision Researcher</h4>
+                  <p class="item-meta">Mar 2020 – Dec 2021</p>
+                </div>
+                <p class="item-desc">
+                  Worked on crowded pedestrian detection as part of a team that won the CrowdHuman
+                  challenge. Built fashion image retrieval from scratch and brought it to a public
+                  cloud service; developed smart-home video highlight detection deployed with two
+                  flagship customers. These projects also produced conference publications in detection,
+                  cross-modal retrieval, and video highlights. Built behavior recognition for content moderation.
+                </p>
+              </li>
+              <li class="item">
+                <div class="experience-heading">
+                  <h4 class="item-title">Megvii · Research Intern</h4>
+                  <p class="item-meta">2019 – Feb 2020</p>
+                </div>
+                <p class="item-desc">
+                  Conducted research on object detection, alongside graduate research on few-shot and
+                  zero-shot learning.
+                </p>
+              </li>
+            </ul>
+            <div class="education">
+              <h3 class="subheading">Education</h3>
+              <div class="education-grid">
+                <div>
+                  <h4 class="item-title">Fudan University</h4>
+                  <p class="item-desc">Computer Science and Technology · 2017–2020</p>
+                  <p class="item-meta">Graduate research in few-shot and zero-shot learning.</p>
+                </div>
+                <div>
+                  <h4 class="item-title">Zhejiang University of Technology</h4>
+                  <p class="item-desc">Communication Engineering · 2013–2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -401,7 +518,9 @@
         <h2>Recent Research</h2>
         <div class="content">
           <p>
-            Recent papers I have co-authored on recommendation, multimodal understanding, and video generation.
+            My research has grown from few-shot and zero-shot learning, detection, and cross-modal retrieval
+            to multimodal understanding, video generation, and recommendation. The papers below reflect
+            recent work I have co-authored across these directions.
           </p>
           <ul class="list">
             <li class="item">
@@ -453,6 +572,7 @@
           <p class="note">
             <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">More publications on Google Scholar ↗</a>
           </p>
+          <p class="note">Academic service: reviewer for ICCV, AAAI, and ACM Multimedia.</p>
         </div>
       </section>
 
