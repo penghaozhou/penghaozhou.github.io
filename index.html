@@ -134,7 +134,7 @@
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: cover;
-      object-position: 34% center;
+      object-position: 42% center;
     }
 
     .hero-visual figcaption {
@@ -212,6 +212,15 @@
       margin-top: 16px;
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .cta-line {
+      margin: 20px 0 0;
+      padding: 12px 14px;
+      border-left: 3px solid var(--accent);
+      background: rgba(0, 106, 106, 0.06);
+      color: #30363d;
+      font-size: 0.98rem;
     }
 
     .tag-row {
@@ -319,31 +328,31 @@
           <ul class="list">
             <li class="item">
               <p class="item-title">Live content representation</p>
-              <p class="item-meta">Multimodal embeddings · semantic IDs · room and slice understanding</p>
+              <p class="item-meta">Compact content codes for retrieval, ranking, and live-room understanding</p>
               <p class="item-desc">
-                Building representations for live rooms, creators, and content slices that can support retrieval, ranking,
-                long-context user modeling, and downstream content intelligence tasks in production recommendation systems.
+                Building multimodal representations for live rooms, creators, and content slices, so recommendation systems
+                can retrieve, rank, and reason over fast-changing live content more effectively.
               </p>
             </li>
             <li class="item">
               <p class="item-title">LLM-driven recommendation</p>
-              <p class="item-meta">User summary · LLM as Recall · LLM as Rank · agentic recommendation</p>
+              <p class="item-meta">Large models for user understanding, candidate retrieval, and ranking decisions</p>
               <p class="item-desc">
-                Exploring how large models can compress user interests, reason over live content, and improve both exploit
-                and explore behavior in large-scale live recommendation systems.
+                Using LLMs to summarize long-term user interests, reason about live-room context, and improve both familiar
+                recommendations and discovery in large-scale live feeds.
               </p>
             </li>
             <li class="item">
               <p class="item-title">Feed quality and content safety AI</p>
-              <p class="item-meta">AI moderation · self-improving evaluation · policy-aware modeling</p>
+              <p class="item-meta">Models and evaluation systems for healthier live feeds</p>
               <p class="item-desc">
                 Leading model and system work that improves live feed quality and safety, including multimodal issue models,
-                human-in-the-loop feedback, and agentic evaluation workflows.
+                human-in-the-loop feedback, and automated evaluation workflows for policy-sensitive decisions.
               </p>
             </li>
             <li class="item">
               <p class="item-title">Content labels and live understanding</p>
-              <p class="item-meta">Summary · taxonomy · keywords · interaction and comment understanding</p>
+              <p class="item-meta">Structured signals from video, audio, language, comments, and creator interactions</p>
               <p class="item-desc">
                 Turning live-room behavior, visual content, language, comments, and creator interaction signals into
                 structured features that improve recommendation quality, safety decisions, and user experience.
@@ -395,17 +404,10 @@
               </p>
               <p class="item-meta">Kepan Nan, Rui Xie, Penghao Zhou, Tiehan Fan, Zhenheng Yang, Zhijie Chen, Xiang Li, Jian Yang, Ying Tai · ICLR 2025</p>
             </li>
-            <li class="item">
-              <p class="item-title">PR-Net: Preference Reasoning for Personalized Video Highlight Detection</p>
-              <p class="item-meta">Rui Chen, Penghao Zhou, Wenhao Wang, Ning Chen, Peng Peng, Xiaoshuai Sun, Wenwu Wang · ICCV 2021</p>
-            </li>
-            <li class="item">
-              <p class="item-title">Relation Parsing Neural Network for Human-Object Interaction Detection</p>
-              <p class="item-meta">Penghao Zhou, Mingmin Chi · ICCV 2019</p>
-            </li>
           </ul>
           <p class="note">
-            Earlier work also includes video retrieval, video highlight detection, and pedestrian detection.
+            More publications, including earlier work on personalized video highlights, video retrieval, pedestrian detection,
+            and human-object interaction, are available on Google Scholar.
           </p>
         </div>
       </section>
@@ -416,7 +418,10 @@
           <p>
             We are hiring multimodal algorithm engineers for TikTok Live Content AI in Beijing, Shanghai, and Singapore.
             The work spans next-generation LLM recommendation, multimodal representation learning, live content foundation
-            models, and AI systems for recommendation and safety governance. Interested candidates can reach me directly at
+            models, and AI systems for recommendation and safety governance.
+          </p>
+          <p class="cta-line">
+            Interested in building live-scale multimodal AI systems with us? Email
             <span class="email-text">patrick.phzhou@gmail.com</span>.
           </p>
           <ul class="list">
