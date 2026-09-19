@@ -202,6 +202,37 @@
       color: #30363d;
     }
 
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .work-card {
+      min-height: 220px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .work-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: rgba(0, 106, 106, 0.1);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
     .note {
       margin-top: 16px;
       color: var(--muted);
@@ -263,6 +294,10 @@
         gap: 14px;
         padding: 30px 0;
       }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -318,8 +353,9 @@
       <section id="work">
         <h2>Current Work</h2>
         <div class="content">
-          <ul class="list">
-            <li class="item">
+          <ul class="work-grid">
+            <li class="work-card">
+              <span class="work-index">01</span>
               <p class="item-title">Live content representation</p>
               <p class="item-meta">Compact content codes for retrieval, ranking, and live-room understanding</p>
               <p class="item-desc">
@@ -327,7 +363,8 @@
                 can retrieve, rank, and reason over fast-changing live content more effectively.
               </p>
             </li>
-            <li class="item">
+            <li class="work-card">
+              <span class="work-index">02</span>
               <p class="item-title">LLM-driven recommendation</p>
               <p class="item-meta">Large models for user understanding, candidate retrieval, and ranking decisions</p>
               <p class="item-desc">
@@ -335,7 +372,8 @@
                 recommendations and discovery in large-scale live feeds.
               </p>
             </li>
-            <li class="item">
+            <li class="work-card">
+              <span class="work-index">03</span>
               <p class="item-title">Feed quality and content safety AI</p>
               <p class="item-meta">Models and evaluation systems for healthier live feeds</p>
               <p class="item-desc">
@@ -343,7 +381,8 @@
                 human-in-the-loop feedback, and automated evaluation workflows for policy-sensitive decisions.
               </p>
             </li>
-            <li class="item">
+            <li class="work-card">
+              <span class="work-index">04</span>
               <p class="item-title">Content labels and live understanding</p>
               <p class="item-meta">Structured signals from video, audio, language, comments, and creator interactions</p>
               <p class="item-desc">
