@@ -13,8 +13,6 @@ Create a GitHub repository named `<username>.github.io`, then run:
 ```bash
 git remote add origin git@github.com:<username>/<username>.github.io.git
 git branch -M main
-git add index.html README.md .gitignore .nojekyll
-git commit -m "Add personal homepage"
 git push -u origin main
 ```
 
@@ -25,3 +23,5 @@ https://<username>.github.io/
 ```
 
 Add additional public contact links in `index.html` before publishing if needed.
+
+The original local photo `my_photo.JPG` is ignored. The published image is the compressed, metadata-stripped file at `assets/profile.jpg`.
