@@ -8,10 +8,10 @@ Open `index.html` directly in a browser.
 
 ## Publish With GitHub Pages
 
-Create a GitHub repository named `<username>.github.io`, then run:
+Create a GitHub repository named `penghaozhou.github.io`, then run:
 
 ```bash
-git remote add origin git@github.com:<username>/<username>.github.io.git
+git remote add origin git@github.com:penghaozhou/penghaozhou.github.io.git
 git branch -M main
 git push -u origin main
 ```
@@ -19,7 +19,7 @@ git push -u origin main
 GitHub Pages will serve the site at:
 
 ```text
-https://<username>.github.io/
+https://penghaozhou.github.io/
 ```
 
 Add additional public contact links in `index.html` before publishing if needed.
