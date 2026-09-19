@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Penghao Zhou</title>
-  <meta name="description" content="Penghao Zhou personal homepage — TikTok Live Content AI">
+  <meta name="description" content="Penghao Zhou leads TikTok Live Content AI, working on multimodal learning and large language models across research and production. Selected research and team opportunities.">
   <meta property="og:title" content="Penghao Zhou">
-  <meta property="og:description" content="Leading TikTok Live Content AI, with a focus on multimodal content understanding, recommendation, and safety.">
+  <meta property="og:description" content="Leading TikTok Live Content AI. Multimodal learning and large language models, from research to production. Explore selected research and opportunities to join the team.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://penghaozhou.github.io/">
   <meta property="og:image" content="https://penghaozhou.github.io/assets/profile_full.jpg">
@@ -19,7 +19,6 @@
       --paper: #fbfaf7;
       --panel: #ffffff;
       --accent: #006a6a;
-      --accent-2: #8a3ffc;
       --warm: #b85c38;
       --shadow: 0 18px 48px rgba(27, 31, 35, 0.09);
     }
@@ -46,42 +45,53 @@
       color: var(--warm);
     }
 
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+    }
+
     .page {
       width: min(1060px, calc(100% - 36px));
       margin: 0 auto;
     }
 
     header {
-      min-height: 78vh;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 40px;
       align-items: center;
-      padding: 54px 0 40px;
+      padding: 72px 0 56px;
       border-bottom: 1px solid var(--line);
     }
 
     h1 {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 8vw, 6.6rem);
-      line-height: 0.95;
+      font-size: clamp(2.5rem, 4.8vw, 3.8rem);
+      line-height: 1.08;
       font-weight: 500;
       letter-spacing: 0;
     }
 
     .subtitle {
-      margin: 24px 0 0;
+      margin: 20px 0 0;
       max-width: 680px;
-      font-size: clamp(1.05rem, 2.1vw, 1.42rem);
+      font-size: 1.15rem;
       color: #30363d;
+    }
+
+    .intro-detail {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 52ch;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px 18px;
-      margin: 30px 0 0;
+      margin: 24px 0 0;
       padding: 0;
       list-style: none;
       font-size: 0.98rem;
@@ -93,14 +103,6 @@
       gap: 8px;
     }
 
-    .links li::before {
-      content: "";
-      width: 5px;
-      height: 5px;
-      background: var(--accent-2);
-      border-radius: 50%;
-    }
-
     .contact-line {
       margin: 12px 0 0;
       color: var(--muted);
@@ -109,6 +111,7 @@
 
     .email-text {
       color: #30363d;
+      overflow-wrap: anywhere;
     }
 
     .hero-visual {
@@ -123,54 +126,52 @@
     .hero-visual img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: auto;
       object-fit: contain;
       object-position: center;
     }
 
     main {
-      padding: 38px 0 70px;
+      padding: 0;
     }
 
     section {
-      display: grid;
-      grid-template-columns: 150px minmax(0, 1fr);
-      gap: 30px;
-      padding: 38px 0;
+      padding: 44px 0;
       border-bottom: 1px solid var(--line);
     }
 
     h2 {
-      margin: 0;
+      margin: 0 0 20px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
+      font-size: 1.8rem;
       font-weight: 500;
       color: #111820;
     }
 
-    .content p {
+    .content > p {
       margin: 0 0 16px;
       max-width: 760px;
     }
 
-    .content p:last-child {
+    .content > p:last-child {
       margin-bottom: 0;
     }
 
-    #work .content > p {
-      max-width: none;
+    #work .content > p,
+    #publications .content > p {
+      max-width: 82ch;
     }
 
     .list {
       display: grid;
-      gap: 18px;
+      gap: 0;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
     .item {
-      padding-bottom: 18px;
+      padding: 22px 0;
       border-bottom: 1px solid rgba(217, 222, 227, 0.82);
     }
 
@@ -180,20 +181,50 @@
     }
 
     .item-title {
-      margin: 0 0 4px;
+      margin: 0 0 10px;
       font-weight: 700;
-      font-size: 1.04rem;
+      font-size: 1.08rem;
+      line-height: 1.4;
     }
 
     .item-meta {
-      margin: 0 0 6px;
+      margin: 0 0 10px;
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.86rem;
+      line-height: 1.5;
     }
 
     .item-desc {
       margin: 0;
       color: #30363d;
+    }
+
+    .item-meta strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .venue {
+      margin: 0 0 7px;
+      color: var(--accent);
+      font-size: 0.83rem;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+
+    #publications .item-title a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    #publications .item-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .paper-links {
+      margin: 10px 0 0;
+      font-size: 0.88rem;
     }
 
     .work-grid {
@@ -206,8 +237,7 @@
     }
 
     .work-card {
-      min-height: 220px;
-      padding: 18px;
+      padding: 24px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.68);
@@ -215,36 +245,45 @@
 
     .work-card-wide {
       grid-column: 1 / -1;
-      min-height: 0;
+      background: rgba(0, 106, 106, 0.045);
+      border-top: 3px solid var(--accent);
     }
 
-    .work-index {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      margin-bottom: 14px;
-      border-radius: 50%;
-      background: rgba(0, 106, 106, 0.1);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
-    .note {
+    .content > .note {
       margin-top: 16px;
       color: var(--muted);
       font-size: 0.96rem;
     }
 
-    .cta-line {
+    .content > .cta-line {
       margin: 20px 0 0;
-      padding: 12px 14px;
+      padding: 16px 20px;
       border-left: 3px solid var(--accent);
       background: rgba(0, 106, 106, 0.06);
       color: #30363d;
       font-size: 0.98rem;
+    }
+
+    .hiring-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .hiring-grid p {
+      margin: 0;
+      color: #30363d;
+    }
+
+    #contact {
+      padding: 32px 0;
+      border-bottom: 0;
+    }
+
+    #contact h2 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
     }
 
     footer {
@@ -265,18 +304,19 @@
         padding-top: 34px;
       }
 
-      .hero-visual {
-        order: -1;
-      }
-
       section {
         grid-template-columns: 1fr;
         gap: 14px;
         padding: 30px 0;
       }
 
-      .work-grid {
+      .work-grid,
+      .hiring-grid {
         grid-template-columns: 1fr;
+      }
+
+      .work-card {
+        padding: 20px;
       }
     }
   </style>
@@ -287,15 +327,17 @@
       <div>
         <h1>Penghao Zhou</h1>
         <p class="subtitle">
-          I lead the TikTok Live Content AI team, building multimodal and large-model systems for live recommendation,
-          creator and viewer understanding, content representation, live foundation models, and feed-quality governance
-          at global scale.
+          I lead the TikTok Live Content AI team.
+        </p>
+        <p class="intro-detail">
+          My focus is on multimodal learning and large language models, bridging research and production systems
+          for live recommendation and content understanding.
         </p>
         <ul class="links" aria-label="Profile links">
           <li><a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#hiring">Hiring</a></li>
+          <li><a href="#work">Current Work</a></li>
+          <li><a href="#publications">Selected Research</a></li>
+          <li><a href="#hiring">Join the Team</a></li>
         </ul>
         <p class="contact-line">Email: <span class="email-text">patrick.phzhou@gmail.com</span></p>
       </div>
@@ -308,61 +350,48 @@
 
     <main>
       <section id="work">
-        <h2>Work</h2>
+        <h2>Current Work</h2>
         <div class="content">
           <p>
-            Live content is highly dynamic: each room combines video, audio, language, creator behavior, viewer feedback,
-            and safety signals in real time.
-          </p>
-          <p>
-            My team focuses on turning these signals into structured representations and reliable model decisions that
-            support recommendation quality, content representation, live foundation models, and feed-quality governance
-            at scale.
+            Live content changes moment by moment. My team brings together video, audio, language, and
+            creator-viewer interactions to build models for recommendation, content understanding, and feed-quality
+            governance. Our work spans four connected directions, supported by shared foundation models.
           </p>
           <ul class="work-grid">
             <li class="work-card">
-              <span class="work-index">02</span>
-              <p class="item-title">LLM-driven recommendation</p>
-              <p class="item-meta">Large models for user understanding, candidate retrieval, and ranking decisions</p>
+              <h3 class="item-title">LLM-driven recommendation</h3>
               <p class="item-desc">
-                Using LLMs to summarize long-term user interests, reason about live-room context, and improve both familiar
-                recommendations and discovery in large-scale live feeds.
+                Modeling evolving user interests with LLMs to guide retrieval and ranking, balancing familiar
+                preferences with the discovery of new creators and live content.
               </p>
             </li>
             <li class="work-card">
-              <span class="work-index">04</span>
-              <p class="item-title">Feed-quality governance</p>
-              <p class="item-meta">Models and evaluation systems for healthier live feeds</p>
+              <h3 class="item-title">Feed-quality governance</h3>
               <p class="item-desc">
-                Leading model and system work that improves live feed quality and safety governance, including multimodal issue models,
-                human-in-the-loop feedback, and automated evaluation workflows for policy-sensitive decisions.
+                Combining multimodal issue detection, human feedback, and automated evaluation to improve
+                content quality and safety decisions in live recommendation feeds.
               </p>
             </li>
             <li class="work-card">
-              <span class="work-index">01</span>
-              <p class="item-title">Live content representation</p>
-              <p class="item-meta">Compact content codes for retrieval, ranking, and live-room understanding</p>
+              <h3 class="item-title">Live content representation</h3>
               <p class="item-desc">
-                Building multimodal representations for live rooms, creators, and content slices, so recommendation systems
-                can retrieve, rank, and reason over fast-changing live content more effectively.
+                Learning multimodal embeddings and semantic codes for live rooms, creators, and content slices,
+                so retrieval and ranking can generalize across short-lived, continuously changing content.
               </p>
             </li>
             <li class="work-card">
-              <span class="work-index">03</span>
-              <p class="item-title">Live understanding</p>
-              <p class="item-meta">Structured signals for room, author, taxonomy, keywords, and interactions</p>
+              <h3 class="item-title">Live understanding</h3>
               <p class="item-desc">
-                Building room and author summaries, content taxonomy, keyword systems, and creator-viewer interaction
-                signals that make live content easier for recommendation systems to understand.
+                Turning video, audio, language, and interactions into room and creator summaries,
+                content categories, and contextual signals that make live experiences understandable to downstream models.
               </p>
             </li>
             <li class="work-card work-card-wide">
-              <span class="work-index">05</span>
-              <p class="item-title">Live foundation models</p>
-              <p class="item-meta">Unified models for video, audio, language, comments, and creator interactions</p>
+              <h3 class="item-title">Live foundation models</h3>
               <p class="item-desc">
-                Building base models and data pipelines for live scenarios, turning heterogeneous content and interaction
-                signals into reusable capabilities for recommendation, understanding, and governance.
+                Developing multimodal models and data pipelines for live video, audio, language, and interactions.
+                This shared foundation supports all four directions above, connecting model training and adaptation
+                with reliable, efficient deployment.
               </p>
             </li>
           </ul>
@@ -370,85 +399,94 @@
       </section>
 
       <section id="publications">
-        <h2>Publications</h2>
+        <h2>Selected Research</h2>
         <div class="content">
           <p>
-            My research and engineering interests center on multimodal learning, large model post-training, recommendation
-            systems, content representation, and scalable AI systems for real-world products.
-          </p>
-          <p>
-            Selected publications are listed below. A fuller and more current list is available on
-            <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a>.
+            Selected papers I have co-authored on recommendation, multimodal understanding, and video generation.
           </p>
           <ul class="list">
             <li class="item">
+              <p class="venue">arXiv · 2026</p>
               <p class="item-title">
                 <a href="https://arxiv.org/abs/2605.21832" target="_blank" rel="noreferrer">FLUID: From Ephemeral IDs to Multimodal Semantic Codes for Industrial-Scale Livestreaming Recommendation</a>
               </p>
-              <p class="item-meta">Xinhang Yuan, Zexi Huang, Anjia Cao, Xudong Lu, Zikai Wang, Penghao Zhou, Chang Liu, Wentao Guo, Qinglei Wang · arXiv 2026</p>
+              <p class="item-meta">Xinhang Yuan, Zexi Huang, Anjia Cao, Xudong Lu, Zikai Wang, <strong>Penghao Zhou</strong>, Chang Liu, Wentao Guo, Qinglei Wang</p>
+              <p class="item-desc">Replaces short-lived item IDs with multimodal semantic codes in a production livestreaming ranker, addressing persistent cold start.</p>
+              <p class="paper-links"><a href="https://arxiv.org/abs/2605.21832" target="_blank" rel="noreferrer">Paper ↗</a></p>
             </li>
             <li class="item">
+              <p class="venue">ICLR · 2026</p>
               <p class="item-title">
                 <a href="https://openreview.net/forum?id=ISZPRsh5YV" target="_blank" rel="noreferrer">MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</a>
               </p>
-              <p class="item-meta">Yipeng Du, Tiehan Fan, Kepan Nan, Rui Xie, Penghao Zhou, Xiang Li, Jian Yang, Zhenheng Yang, Ying Tai · ICLR 2026</p>
+              <p class="item-meta">Yipeng Du, Tiehan Fan, Kepan Nan, Rui Xie, <strong>Penghao Zhou</strong>, Xiang Li, Jian Yang, Zhenheng Yang, Ying Tai</p>
+              <p class="item-desc">Uses object-centric visual prompts to separate object and camera motion, with a dedicated dataset for fine-grained video understanding.</p>
+              <p class="paper-links"><a href="https://openreview.net/forum?id=ISZPRsh5YV" target="_blank" rel="noreferrer">Paper ↗</a></p>
             </li>
             <li class="item">
+              <p class="venue">ICCV · 2025</p>
               <p class="item-title">
                 <a href="https://arxiv.org/abs/2501.02976" target="_blank" rel="noreferrer">STAR: Spatial-Temporal Augmentation with Text-to-Video Models for Real-World Video Super-Resolution</a>
               </p>
-              <p class="item-meta">Rui Xie, Yinhong Liu, Penghao Zhou, Chen Zhao, Jun Zhou, Kai Zhang, Zhenyu Zhang, Jian Yang, Zhenheng Yang, Ying Tai · ICCV 2025</p>
+              <p class="item-meta">Rui Xie, Yinhong Liu, <strong>Penghao Zhou</strong>, Chen Zhao, Jun Zhou, Kai Zhang, Zhenyu Zhang, Jian Yang, Zhenheng Yang, Ying Tai</p>
+              <p class="item-desc">Adapts text-to-video diffusion models for video super-resolution, preserving spatial detail and temporal consistency while controlling fidelity.</p>
+              <p class="paper-links"><a href="https://arxiv.org/abs/2501.02976" target="_blank" rel="noreferrer">Paper ↗</a></p>
             </li>
             <li class="item">
+              <p class="venue">CVPR · 2025</p>
               <p class="item-title">
                 <a href="https://arxiv.org/abs/2412.09283" target="_blank" rel="noreferrer">InstanceCap: Improving Text-to-Video Generation via Instance-aware Structured Caption</a>
               </p>
-              <p class="item-meta">Tiehan Fan, Kepan Nan, Rui Xie, Penghao Zhou, Zhenheng Yang, Chaoyou Fu, Xiang Li, Jian Yang, Ying Tai · CVPR 2025</p>
+              <p class="item-meta">Tiehan Fan, Kepan Nan, Rui Xie, <strong>Penghao Zhou</strong>, Zhenheng Yang, Chaoyou Fu, Xiang Li, Jian Yang, Ying Tai</p>
+              <p class="item-desc">Builds instance-aware structured video captions to reduce hallucinations and improve the alignment between text and generated video.</p>
+              <p class="paper-links"><a href="https://arxiv.org/abs/2412.09283" target="_blank" rel="noreferrer">Paper ↗</a></p>
             </li>
             <li class="item">
+              <p class="venue">ICLR · 2025</p>
               <p class="item-title">
                 <a href="https://openreview.net/forum?id=j7kdXSrISM" target="_blank" rel="noreferrer">OpenVid-1M: A Large-Scale High-Quality Dataset for Text-to-Video Generation</a>
               </p>
-              <p class="item-meta">Kepan Nan, Rui Xie, Penghao Zhou, Tiehan Fan, Zhenheng Yang, Zhijie Chen, Xiang Li, Jian Yang, Ying Tai · ICLR 2025</p>
+              <p class="item-meta">Kepan Nan, Rui Xie, <strong>Penghao Zhou</strong>, Tiehan Fan, Zhenheng Yang, Zhijie Chen, Xiang Li, Jian Yang, Ying Tai</p>
+              <p class="item-desc">Introduces over one million curated text-video pairs and a multimodal diffusion transformer for high-quality video generation.</p>
+              <p class="paper-links"><a href="https://openreview.net/forum?id=j7kdXSrISM" target="_blank" rel="noreferrer">Paper ↗</a></p>
             </li>
           </ul>
           <p class="note">
-            More publications, including earlier work on personalized video highlights, video retrieval, pedestrian detection,
-            and human-object interaction, are available on Google Scholar.
+            <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">More publications on Google Scholar ↗</a>
           </p>
         </div>
       </section>
 
       <section id="hiring">
-        <h2>Hiring</h2>
+        <h2>Join the Team</h2>
         <div class="content">
           <p>
             We are hiring AI researchers and multimodal algorithm engineers for TikTok Live Content AI in Beijing,
-            Shanghai, and Singapore. The team works on real live-scale systems where recommendation, content
-            understanding, and governance models directly affect creator and viewer experience.
+            Shanghai, and Singapore. Help us connect advances in multimodal learning and LLMs with the
+            real-time challenges of live content.
           </p>
+          <div class="hiring-grid">
+            <div>
+              <h3 class="item-title">Research with a path to production</h3>
+              <p>
+                Our problems connect model design, data, post-training, evaluation, and deployment.
+                The challenge is to make models useful under changing content, noisy feedback, and real-time constraints,
+                then measure what improves the creator and viewer experience.
+              </p>
+            </div>
+            <div>
+              <h3 class="item-title">People who turn questions into systems</h3>
+              <p>
+                We value researchers and engineers who frame clear hypotheses, build careful experiments,
+                and take ownership of making models work beyond a benchmark. Bring your interest in
+                recommendation, multimodal modeling, or foundation models.
+              </p>
+            </div>
+          </div>
           <p class="cta-line">
-            Interested in building live-scale multimodal AI systems with us? Email
+            Interested in joining us? Send a short introduction and your CV or selected work to
             <span class="email-text">patrick.phzhou@gmail.com</span>.
           </p>
-          <ul class="list">
-            <li class="item">
-              <p class="item-title">Core directions</p>
-              <p class="item-meta">Recommendation · representation · post-training · foundation models · applied research</p>
-              <p class="item-desc">
-                Next-generation LLM recommendation, agentic recommendation, semantic ID and multimodal representation,
-                post-training and RL for business scenarios, live content foundation models, and scenario-driven research.
-              </p>
-            </li>
-            <li class="item">
-              <p class="item-title">What we look for</p>
-              <p class="item-meta">Strong modeling taste, product sense, and ownership</p>
-              <p class="item-desc">
-                People who enjoy pushing frontier models into production: defining ambiguous problems, building reliable
-                systems, measuring product impact, and collaborating closely with a high-bar team.
-              </p>
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -456,9 +494,8 @@
         <h2>Contact</h2>
         <div class="content">
           <p>
-            For collaboration, recruiting, or technical discussion, please email
+            For research collaborations, professional opportunities, or technical conversations:
             <span class="email-text">patrick.phzhou@gmail.com</span>.
-            You can also find my publication record through the Google Scholar link above.
           </p>
         </div>
       </section>
