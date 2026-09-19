@@ -209,6 +209,11 @@
       background: rgba(255, 255, 255, 0.68);
     }
 
+    .work-card-wide {
+      grid-column: 1 / -1;
+      min-height: 0;
+    }
+
     .work-index {
       display: inline-flex;
       align-items: center;
@@ -312,30 +317,12 @@
           </p>
           <ul class="work-grid">
             <li class="work-card">
-              <span class="work-index">01</span>
-              <p class="item-title">Live content representation</p>
-              <p class="item-meta">Compact content codes for retrieval, ranking, and live-room understanding</p>
-              <p class="item-desc">
-                Building multimodal representations for live rooms, creators, and content slices, so recommendation systems
-                can retrieve, rank, and reason over fast-changing live content more effectively.
-              </p>
-            </li>
-            <li class="work-card">
               <span class="work-index">02</span>
               <p class="item-title">LLM-driven recommendation</p>
               <p class="item-meta">Large models for user understanding, candidate retrieval, and ranking decisions</p>
               <p class="item-desc">
                 Using LLMs to summarize long-term user interests, reason about live-room context, and improve both familiar
                 recommendations and discovery in large-scale live feeds.
-              </p>
-            </li>
-            <li class="work-card">
-              <span class="work-index">03</span>
-              <p class="item-title">Content tagging and live understanding</p>
-              <p class="item-meta">Structured signals for room, author, taxonomy, keywords, and interactions</p>
-              <p class="item-desc">
-                Building room and author summaries, content taxonomy, keyword systems, and creator-viewer interaction
-                signals that make live content easier for recommendation systems to understand.
               </p>
             </li>
             <li class="work-card">
@@ -348,6 +335,24 @@
               </p>
             </li>
             <li class="work-card">
+              <span class="work-index">01</span>
+              <p class="item-title">Live content representation</p>
+              <p class="item-meta">Compact content codes for retrieval, ranking, and live-room understanding</p>
+              <p class="item-desc">
+                Building multimodal representations for live rooms, creators, and content slices, so recommendation systems
+                can retrieve, rank, and reason over fast-changing live content more effectively.
+              </p>
+            </li>
+            <li class="work-card">
+              <span class="work-index">03</span>
+              <p class="item-title">Live understanding</p>
+              <p class="item-meta">Structured signals for room, author, taxonomy, keywords, and interactions</p>
+              <p class="item-desc">
+                Building room and author summaries, content taxonomy, keyword systems, and creator-viewer interaction
+                signals that make live content easier for recommendation systems to understand.
+              </p>
+            </li>
+            <li class="work-card work-card-wide">
               <span class="work-index">05</span>
               <p class="item-title">Live foundation models</p>
               <p class="item-meta">Unified models for video, audio, language, comments, and creator interactions</p>
