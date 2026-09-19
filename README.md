@@ -1,6 +1,6 @@
 # Personal Homepage
 
-Static personal homepage inspired by `https://zipengfu.github.io/`, focused on TikTok Live Content AI work.
+Static personal homepage focused on TikTok Live Content AI work.
 
 ## Preview
 
