@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Penghao Zhou</title>
+  <meta name="description" content="Penghao Zhou personal homepage — TikTok Live Content AI">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b1f23;
+      --muted: #5c6670;
+      --line: #d9dee3;
+      --paper: #fbfaf7;
+      --panel: #ffffff;
+      --accent: #006a6a;
+      --accent-2: #8a3ffc;
+      --warm: #b85c38;
+      --shadow: 0 18px 48px rgba(27, 31, 35, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.58;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--warm);
+    }
+
+    .page {
+      width: min(1060px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      gap: 48px;
+      align-items: center;
+      padding: 54px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--warm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.6rem);
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 24px 0 0;
+      max-width: 680px;
+      font-size: clamp(1.05rem, 2.1vw, 1.42rem);
+      color: #30363d;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.98rem;
+    }
+
+    .links li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .links li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: var(--accent-2);
+      border-radius: 50%;
+    }
+
+    .hero-visual {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: 38% center;
+    }
+
+    .hero-visual figcaption {
+      padding: 14px 16px 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--line);
+    }
+
+    main {
+      padding: 38px 0 70px;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 38px;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #111820;
+    }
+
+    .content p {
+      margin: 0 0 16px;
+      max-width: 760px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .list {
+      display: grid;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .item {
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(217, 222, 227, 0.82);
+    }
+
+    .item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .item-title {
+      margin: 0 0 4px;
+      font-weight: 700;
+      font-size: 1.04rem;
+    }
+
+    .item-meta {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .item-desc {
+      margin: 0;
+      color: #30363d;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #30363d;
+      background: rgba(255, 255, 255, 0.62);
+      font-size: 0.88rem;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 28px, 1060px);
+      }
+
+      header {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 34px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      section {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 30px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="eyebrow">TikTok Live Content AI · Multimodal Understanding · LLM4Rec</p>
+        <h1>Penghao Zhou</h1>
+        <p class="subtitle">
+          I lead the TikTok Live Content AI team, working on content understanding for live recommendation and content safety.
+          My current focus is building multimodal and large-model systems that understand live rooms, creators, user interests,
+          and feed quality at global scale.
+        </p>
+        <ul class="links" aria-label="Profile links">
+          <li><a href="mailto:patrick.phzhou@gmail.com">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#hiring">Hiring</a></li>
+        </ul>
+      </div>
+      <figure class="hero-visual">
+        <img
+          alt="Penghao Zhou standing by a mountain lake"
+          src="assets/profile.jpg">
+        <figcaption>Penghao Zhou · TikTok Live Content AI</figcaption>
+      </figure>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <div class="content">
+          <p>
+            I am the Tech Leader &amp; Manager for TikTok Live Content AI. Our team works at the intersection of
+            live recommendation, multimodal content understanding, creator and viewer modeling, and AI-driven content governance.
+          </p>
+          <p>
+            We build models and systems for high-dynamic live scenarios: room and slice summaries, author personas,
+            multimodal representations, content taxonomy, user-comment understanding, feed-quality models, and foundation
+            models that support both recommendation and moderation.
+          </p>
+          <div class="tag-row" aria-label="Interests">
+            <span class="tag">TikTok Live</span>
+            <span class="tag">Multimodal learning</span>
+            <span class="tag">LLM4Rec</span>
+            <span class="tag">Content understanding</span>
+            <span class="tag">AI moderation</span>
+            <span class="tag">Foundation models</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <h2>Current Work</h2>
+        <div class="content">
+          <ul class="list">
+            <li class="item">
+              <p class="item-title">Live content representation</p>
+              <p class="item-meta">Multimodal embeddings · semantic IDs · room and slice understanding</p>
+              <p class="item-desc">
+                Building representations for live rooms, creators, and content slices that can support retrieval, ranking,
+                long-context user modeling, and downstream content intelligence tasks.
+              </p>
+            </li>
+            <li class="item">
+              <p class="item-title">LLM-driven recommendation</p>
+              <p class="item-meta">User summary · LLM as Recall · LLM as Rank · agentic recommendation</p>
+              <p class="item-desc">
+                Exploring how large models can compress user interests, reason over live content, and improve both exploit
+                and explore behavior in large-scale live recommendation systems.
+              </p>
+            </li>
+            <li class="item">
+              <p class="item-title">Feed quality and content safety AI</p>
+              <p class="item-meta">AI moderation · self-improving evaluation · policy-aware modeling</p>
+              <p class="item-desc">
+                Leading model and system work that improves live feed quality and safety, including multimodal issue models,
+                human-in-the-loop feedback, and agentic evaluation workflows.
+              </p>
+            </li>
+            <li class="item">
+              <p class="item-title">Content labels and live understanding</p>
+              <p class="item-meta">Summary · taxonomy · keywords · interaction and comment understanding</p>
+              <p class="item-desc">
+                Turning live-room behavior, visual content, language, comments, and creator interaction signals into
+                structured features that improve recommendation quality and user experience.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+        <div class="content">
+          <p>
+            My research and engineering interests center on multimodal learning, large model post-training, recommendation
+            systems, content representation, and scalable AI systems for real-world products.
+          </p>
+          <p>
+            A current list of papers and citations is available on
+            <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a>.
+          </p>
+          <ul class="list">
+            <li class="item">
+              <p class="item-title">
+                <a href="https://arxiv.org/abs/2605.21832" target="_blank" rel="noreferrer">FLUID: From Ephemeral IDs to Multimodal Semantic Codes for Industrial-Scale Livestreaming Recommendation</a>
+              </p>
+              <p class="item-meta">Xinhang Yuan, Zexi Huang, Anjia Cao, Xudong Lu, Zikai Wang, Penghao Zhou, Chang Liu, Wentao Guo, Qinglei Wang · arXiv 2026</p>
+            </li>
+            <li class="item">
+              <p class="item-title">
+                <a href="https://openreview.net/forum?id=ISZPRsh5YV" target="_blank" rel="noreferrer">MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</a>
+              </p>
+              <p class="item-meta">Yipeng Du, Tiehan Fan, Kepan Nan, Rui Xie, Penghao Zhou, Xiang Li, Jian Yang, Zhenheng Yang, Ying Tai · ICLR 2026</p>
+            </li>
+            <li class="item">
+              <p class="item-title">
+                <a href="https://arxiv.org/abs/2501.02976" target="_blank" rel="noreferrer">STAR: Spatial-Temporal Augmentation with Text-to-Video Models for Real-World Video Super-Resolution</a>
+              </p>
+              <p class="item-meta">Rui Xie, Yinhong Liu, Penghao Zhou, Chen Zhao, Jun Zhou, Kai Zhang, Zhenyu Zhang, Jian Yang, Zhenheng Yang, Ying Tai · ICCV 2025</p>
+            </li>
+            <li class="item">
+              <p class="item-title">
+                <a href="https://arxiv.org/abs/2412.09283" target="_blank" rel="noreferrer">InstanceCap: Improving Text-to-Video Generation via Instance-aware Structured Caption</a>
+              </p>
+              <p class="item-meta">Tiehan Fan, Kepan Nan, Rui Xie, Penghao Zhou, Zhenheng Yang, Chaoyou Fu, Xiang Li, Jian Yang, Ying Tai · CVPR 2025</p>
+            </li>
+            <li class="item">
+              <p class="item-title">
+                <a href="https://openreview.net/forum?id=j7kdXSrISM" target="_blank" rel="noreferrer">OpenVid-1M: A Large-Scale High-Quality Dataset for Text-to-Video Generation</a>
+              </p>
+              <p class="item-meta">Kepan Nan, Rui Xie, Penghao Zhou, Tiehan Fan, Zhenheng Yang, Zhijie Chen, Xiang Li, Jian Yang, Ying Tai · ICLR 2025</p>
+            </li>
+            <li class="item">
+              <p class="item-title">PAC-Net: Highlight Your Video via History Preference Modeling</p>
+              <p class="item-meta">Haoran Wang, Penghao Zhou, Chuanwen Zhou, Ziqi Zhang, Xiaoshuai Sun · ECCV 2022</p>
+            </li>
+            <li class="item">
+              <p class="item-title">Dig into Multi-modal Cues for Video Retrieval with Hierarchical Alignment</p>
+              <p class="item-meta">Wenhao Wang, Min Zhang, Rui Chen, Guanyu Cai, Penghao Zhou, Peng Peng, Xiaoshuai Sun et al. · IJCAI 2021</p>
+            </li>
+            <li class="item">
+              <p class="item-title">PR-Net: Preference Reasoning for Personalized Video Highlight Detection</p>
+              <p class="item-meta">Rui Chen, Penghao Zhou, Wenhao Wang, Ning Chen, Peng Peng, Xiaoshuai Sun, Wenwu Wang · ICCV 2021</p>
+            </li>
+            <li class="item">
+              <p class="item-title">NOH-NMS: Improving Pedestrian Detection by Nearby Objects Hallucination</p>
+              <p class="item-meta">Penghao Zhou, Chuanwen Zhou, Peng Peng, Jun Du, Xiaoshuai Sun, Xiaojie Guo, Feiyue Huang · ACM MM 2020</p>
+            </li>
+            <li class="item">
+              <p class="item-title">Relation Parsing Neural Network for Human-Object Interaction Detection</p>
+              <p class="item-meta">Penghao Zhou, Mingmin Chi · ICCV 2019</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="hiring">
+        <h2>Hiring</h2>
+        <div class="content">
+          <p>
+            We are hiring multimodal algorithm engineers for TikTok Live Content AI in Beijing, Shanghai, and Singapore.
+            The work spans next-generation LLM recommendation, multimodal representation learning, live content foundation
+            models, and AI systems for recommendation and safety governance.
+          </p>
+          <ul class="list">
+            <li class="item">
+              <p class="item-title">What we look for</p>
+              <p class="item-meta">Multimodal learning · large models · recommendation · moderation</p>
+              <p class="item-desc">
+                Strong ownership, deep technical curiosity, practical system-building taste, and experience turning model
+                ideas into measurable product impact.
+              </p>
+            </li>
+            <li class="item">
+              <p class="item-title">What you would work on</p>
+              <p class="item-meta">Live-scale AI systems</p>
+              <p class="item-desc">
+                LLM4Rec, Agentic Rec, semantic ID modeling, content taxonomy, creator and user understanding,
+                multimodal foundation models, and AI-driven feed-quality systems.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="content">
+          <p>
+            For collaboration, recruiting, or technical discussion, please email
+            <a href="mailto:patrick.phzhou@gmail.com">patrick.phzhou@gmail.com</a>.
+            You can also find my publication record through the Google Scholar link above.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Penghao Zhou</span>
+    </footer>
+  </div>
+</body>
+</html>

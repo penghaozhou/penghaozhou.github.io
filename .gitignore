@@ -1,0 +1,12 @@
+.DS_Store
+my_photo.JPG
+
+# Local assistant/tooling state
+.trae/
+.merlin-cli/
+.merlin-home/
+
+# Editor and cache files
+*.swp
+*.swo
+__pycache__/
