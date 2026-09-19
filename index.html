@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Penghao Zhou</title>
   <meta name="description" content="Penghao Zhou personal homepage — TikTok Live Content AI">
+  <meta property="og:title" content="Penghao Zhou">
+  <meta property="og:description" content="Tech Leader & Manager for TikTok Live Content AI, working on multimodal content understanding, recommendation, and safety.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://penghaozhou.github.io/">
+  <meta property="og:image" content="https://penghaozhou.github.io/assets/profile.jpg">
   <style>
     :root {
       color-scheme: light;
@@ -49,7 +54,7 @@
     header {
       min-height: 78vh;
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
       gap: 48px;
       align-items: center;
       padding: 54px 0 40px;
@@ -117,9 +122,9 @@
     .hero-visual img {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
-      object-position: 38% center;
+      object-position: 34% center;
     }
 
     .hero-visual figcaption {
@@ -193,6 +198,12 @@
       color: #30363d;
     }
 
+    .note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
     .tag-row {
       display: flex;
       flex-wrap: wrap;
@@ -249,15 +260,14 @@
         <p class="eyebrow">TikTok Live Content AI · Multimodal Understanding · LLM4Rec</p>
         <h1>Penghao Zhou</h1>
         <p class="subtitle">
-          I lead the TikTok Live Content AI team, working on content understanding for live recommendation and content safety.
-          My current focus is building multimodal and large-model systems that understand live rooms, creators, user interests,
-          and feed quality at global scale.
+          I lead the TikTok Live Content AI team, building multimodal and large-model systems for live recommendation,
+          creator and viewer understanding, feed quality, and content safety at global scale.
         </p>
         <ul class="links" aria-label="Profile links">
           <li><a href="mailto:patrick.phzhou@gmail.com">Email</a></li>
           <li><a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></li>
           <li><a href="#work">Work</a></li>
-          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#hiring">Hiring</a></li>
         </ul>
       </div>
@@ -280,7 +290,7 @@
           <p>
             We build models and systems for high-dynamic live scenarios: room and slice summaries, author personas,
             multimodal representations, content taxonomy, user-comment understanding, feed-quality models, and foundation
-            models that support both recommendation and moderation.
+            models that support recommendation and moderation decisions.
           </p>
           <div class="tag-row" aria-label="Interests">
             <span class="tag">TikTok Live</span>
@@ -302,7 +312,7 @@
               <p class="item-meta">Multimodal embeddings · semantic IDs · room and slice understanding</p>
               <p class="item-desc">
                 Building representations for live rooms, creators, and content slices that can support retrieval, ranking,
-                long-context user modeling, and downstream content intelligence tasks.
+                long-context user modeling, and downstream content intelligence tasks in production recommendation systems.
               </p>
             </li>
             <li class="item">
@@ -326,22 +336,22 @@
               <p class="item-meta">Summary · taxonomy · keywords · interaction and comment understanding</p>
               <p class="item-desc">
                 Turning live-room behavior, visual content, language, comments, and creator interaction signals into
-                structured features that improve recommendation quality and user experience.
+                structured features that improve recommendation quality, safety decisions, and user experience.
               </p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="research">
-        <h2>Research</h2>
+      <section id="publications">
+        <h2>Publications</h2>
         <div class="content">
           <p>
             My research and engineering interests center on multimodal learning, large model post-training, recommendation
             systems, content representation, and scalable AI systems for real-world products.
           </p>
           <p>
-            A current list of papers and citations is available on
+            Selected publications are listed below. A fuller and more current list is available on
             <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a>.
           </p>
           <ul class="list">
@@ -376,26 +386,17 @@
               <p class="item-meta">Kepan Nan, Rui Xie, Penghao Zhou, Tiehan Fan, Zhenheng Yang, Zhijie Chen, Xiang Li, Jian Yang, Ying Tai · ICLR 2025</p>
             </li>
             <li class="item">
-              <p class="item-title">PAC-Net: Highlight Your Video via History Preference Modeling</p>
-              <p class="item-meta">Haoran Wang, Penghao Zhou, Chuanwen Zhou, Ziqi Zhang, Xiaoshuai Sun · ECCV 2022</p>
-            </li>
-            <li class="item">
-              <p class="item-title">Dig into Multi-modal Cues for Video Retrieval with Hierarchical Alignment</p>
-              <p class="item-meta">Wenhao Wang, Min Zhang, Rui Chen, Guanyu Cai, Penghao Zhou, Peng Peng, Xiaoshuai Sun et al. · IJCAI 2021</p>
-            </li>
-            <li class="item">
               <p class="item-title">PR-Net: Preference Reasoning for Personalized Video Highlight Detection</p>
               <p class="item-meta">Rui Chen, Penghao Zhou, Wenhao Wang, Ning Chen, Peng Peng, Xiaoshuai Sun, Wenwu Wang · ICCV 2021</p>
-            </li>
-            <li class="item">
-              <p class="item-title">NOH-NMS: Improving Pedestrian Detection by Nearby Objects Hallucination</p>
-              <p class="item-meta">Penghao Zhou, Chuanwen Zhou, Peng Peng, Jun Du, Xiaoshuai Sun, Xiaojie Guo, Feiyue Huang · ACM MM 2020</p>
             </li>
             <li class="item">
               <p class="item-title">Relation Parsing Neural Network for Human-Object Interaction Detection</p>
               <p class="item-meta">Penghao Zhou, Mingmin Chi · ICCV 2019</p>
             </li>
           </ul>
+          <p class="note">
+            Earlier work also includes video retrieval, video highlight detection, and pedestrian detection.
+          </p>
         </div>
       </section>
 
@@ -405,7 +406,8 @@
           <p>
             We are hiring multimodal algorithm engineers for TikTok Live Content AI in Beijing, Shanghai, and Singapore.
             The work spans next-generation LLM recommendation, multimodal representation learning, live content foundation
-            models, and AI systems for recommendation and safety governance.
+            models, and AI systems for recommendation and safety governance. Interested candidates can reach me directly at
+            <a href="mailto:patrick.phzhou@gmail.com">patrick.phzhou@gmail.com</a>.
           </p>
           <ul class="list">
             <li class="item">
@@ -441,7 +443,7 @@
     </main>
 
     <footer>
-      <span>© 2026 Penghao Zhou</span>
+      <span>Penghao Zhou</span>
     </footer>
   </div>
 </body>
