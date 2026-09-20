@@ -303,6 +303,44 @@
       margin-top: 8px;
     }
 
+    .education-feature {
+      grid-column: 1 / -1;
+      margin: 10px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .education-feature > a {
+      display: block;
+    }
+
+    .education-feature img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 800 / 379;
+      object-fit: contain;
+    }
+
+    .education-feature figcaption {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      padding: 11px 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    .education-feature figcaption strong {
+      color: #30363d;
+      font-weight: 650;
+    }
+
     .content > .note {
       margin-top: 16px;
       color: var(--muted);
@@ -585,6 +623,28 @@
                     <strong>Focus:</strong> Intelligent control · Autonomous vehicles · Quadrotor systems
                   </p>
                 </div>
+                <figure class="education-feature">
+                  <a
+                    href="https://openaccess.thecvf.com/content_ICCV_2019/html/Zhou_Relation_Parsing_Neural_Network_for_Human-Object_Interaction_Detection_ICCV_2019_paper.html"
+                    target="_blank"
+                    rel="noreferrer">
+                    <img
+                      src="assets/rpnn_iccv2019.png"
+                      alt="Architecture of the Relation Parsing Neural Network for human-object interaction detection"
+                      loading="lazy"
+                      decoding="async">
+                  </a>
+                  <figcaption>
+                    <span>
+                      <strong>First-author paper:</strong>
+                      <a
+                        href="https://openaccess.thecvf.com/content_ICCV_2019/html/Zhou_Relation_Parsing_Neural_Network_for_Human-Object_Interaction_Detection_ICCV_2019_paper.html"
+                        target="_blank"
+                        rel="noreferrer">Relation Parsing Neural Network for Human-Object Interaction Detection</a>
+                    </span>
+                    <span>ICCV 2019</span>
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
